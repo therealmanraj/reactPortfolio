@@ -23,11 +23,11 @@ export const NavbarContainer = styled.div`
   height: 60px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
-  max-width: 1200px;
+  // padding: 0 24px;
+  // max-width: 1200px;
 `
 
-export const NavLogo = styled(LinkR)`
+export const LeftNavBar = styled.div`
     width: 80%;    
     padding: 0 6px;
     display: flex;

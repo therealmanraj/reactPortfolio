@@ -14,7 +14,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/therealmanraj",
   resume:
-    "https://drive.google.com/file/d/1ZkLly2E1CwTwojXC8Dg5dxSv6Dws1BC9/view?usp=drive_link",
+    "https://drive.google.com/drive/folders/1z4-RrdOD49IfqNwezM1xpWt3wF1WkWuX?usp=sharing",
   linkedin: "https://www.linkedin.com/in/therealmanraj/",
   twitter: "https://twitter.com/imtherealmanraj",
 };

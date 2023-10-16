@@ -199,36 +199,17 @@ const index = ({ openModal, setOpenModal }) => {
                     />
                     <Image src={project?.image} />
                     <Title>{project?.title}</Title>
-                    <Date>{project.date}</Date>
+                    <Date>{project?.date}</Date>
                     <Tags>
                         {project?.tags.map((tag) => (
-                            <Tag>{tag}</Tag>
+                            <Tag key={tag}>{tag}</Tag>
                         ))}
                     </Tags>
                     <Desc>{project?.description}</Desc>
-                    {project.member && (
-                        <>
-                            <Label>Members</Label>
-                            <Members>
-                                {project?.member.map((member) => (
-                                    <Member>
-                                        <MemberImage src={member.img} />
-                                        <MemberName>{member.name}</MemberName>
-                                        <a href={member.github} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
-                                            <GitHub />
-                                        </a>
-                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
-                                            <LinkedIn />
-                                        </a>
-                                    </Member>
-                                ))}
-                            </Members>
-                        </>
-                    )}
                     <ButtonGroup>
                         {project?.github && <Button dull href={project?.github} target='new'>View Code</Button>}
                         {project?.webapp && <Button href={project?.webapp} target='new'>View Live</Button>}
-                        {project?.paper && <Button href={project?.webapp} target='new'>View Paper</Button>}
+                        {project?.paper && <Button href={project?.paper} target='new'>View Paper</Button>}
                     </ButtonGroup>
                 </Wrapper>
             </Container>
