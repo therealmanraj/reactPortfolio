@@ -1,15 +1,12 @@
-import coffeeSales from '../images/coffeeSales.png';
-import arthResearchPaper from '../images/arthResearchPaper.png';
-import covidApp from '../images/covidApp.jpeg';
-import netflixDashboard from '../images/netflixDashboard.png';
+import coffeeSales from "../images/coffeeSales.png";
+import arthResearchPaper from "../images/arthResearchPaper.png";
+import covidApp from "../images/covidApp.jpeg";
+import netflixDashboard from "../images/netflixDashboard.png";
+import BankChurnAnalysis from "../images/BankChurnAnalysis.png";
 
 export const Bio = {
   name: "Manraj Singh",
-  roles: [
-    "Data Analyst",
-    "Full Stack Developer",
-    "Guitarist"
-  ],
+  roles: ["Data Analyst", "Full Stack Developer", "Guitarist"],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/therealmanraj",
@@ -49,8 +46,7 @@ export const skills = [
       },
       {
         name: "Material UI",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
+        image: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
       },
     ],
   },
@@ -63,8 +59,7 @@ export const skills = [
       },
       {
         name: "Express JS",
-        image:
-          "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
+        image: "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
       },
       {
         name: "Graph Ql",
@@ -86,13 +81,11 @@ export const skills = [
     skills: [
       {
         name: "Python",
-        image:
-          "https://www.vectorlogo.zone/logos/python/python-icon.svg",
+        image: "https://www.vectorlogo.zone/logos/python/python-icon.svg",
       },
       {
         name: "MySQL",
-        image:
-          "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
+        image: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
       },
       {
         name: "Power BI",
@@ -101,13 +94,11 @@ export const skills = [
       },
       {
         name: "Tableau",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/tableau-software.svg",
+        image: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg",
       },
       {
         name: "Microsoft Office",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/office-1.svg",
+        image: "https://cdn.worldvectorlogo.com/logos/office-1.svg",
       },
     ],
   },
@@ -153,7 +144,7 @@ export const experiences = [
       "Node JS",
       "Power BI",
       "Microsoft Excel",
-      "Flask"
+      "Flask",
     ],
     // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
   },
@@ -164,11 +155,7 @@ export const experiences = [
     company: "PECS",
     date: "May 2022 - July 2022",
     desc: "Built UI/UX of the website with a metaverse theme. Was also tasked with cleaning the existing university data.",
-    skills: [
-      "Figma",
-      "SQL",
-      "Python",
-    ],
+    skills: ["Figma", "SQL", "Python"],
   },
   {
     id: 2,
@@ -177,12 +164,7 @@ export const experiences = [
     company: "Internshala",
     date: "Febuary 2022 - April 2022",
     desc: "Promoted the Internshala brand, products, and services among my peers, and hosted activities like online seminars and built relationships with students and faculty.",
-    skills: [
-      "Marketing",
-      "Commpuncation",
-      "Presentation",
-      "Leadership",
-    ],
+    skills: ["Marketing", "Commpuncation", "Presentation", "Leadership"],
   },
 ];
 
@@ -219,57 +201,60 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "Bank Churn Analysis",
+    date: "Dec 2022 - Dec 2022",
+    description:
+      "Led an impactful project within the banking sector, orchestrating data-driven strategies to reduce customer churn across three countries: France, Germany, and Spain. By segmenting customers, age profiling, and personalized communication, we tailored retention plans. We addressed country-specific issues, with a focus on Germany, and targeted high-churn age groups like 35-40. The project emphasized feedback integration, employee training, and predictive analytics for proactive churn management.",
+    image: BankChurnAnalysis,
+    tags: ["Tableau", "Data Analysis", "Churn Analysis"],
+    category: "data analysis",
+    webapp:
+      "https://public.tableau.com/app/profile/manraj.singh4264/viz/BankChurnAnalysis_16983365275080/Dashboard1",
+  },
+  {
+    id: 1,
     title: "Coffee Sales Dashboard",
     date: "Nov 2022 - Nov 2022",
     description:
       "The Coffee Sales Dashboard is an Excel project that provides visualized insights into coffee sales data. The dashboard features a dynamic line chart displaying the total sales of various coffee roast types over time. Additionally, it includes a bar chart to showcase the top 5 customers and another bar chart to illustrate sales by country. Users can customize their analysis through interactive elements, including a timeline selector for choosing specific date ranges, a roast type selector to compare different coffee varieties, and size and loyalty selectors for tailored filtering. Key Excel features used in the project include charts, data validation, pivot tables, slicers, named ranges, and conditional formatting to enhance data presentation and user interactivity.",
-    image:coffeeSales,
-    tags: [
-      "Excel",
-      "Pivot Tables",
-      "Advance Excel Functions",
-    ],
+    image: coffeeSales,
+    tags: ["Excel", "Pivot Tables", "Advance Excel Functions"],
     category: "data analysis",
-    webapp: "https://onedrive.live.com/edit?id=D8EC99F49B18BD6B!4383&resid=D8EC99F49B18BD6B!4383&ithint=file%2cxlsx&authkey=!AJFXaFQ-yHoamLM&wdo=2",
+    webapp:
+      "https://onedrive.live.com/edit?id=D8EC99F49B18BD6B!4383&resid=D8EC99F49B18BD6B!4383&ithint=file%2cxlsx&authkey=!AJFXaFQ-yHoamLM&wdo=2",
   },
   {
-    id: 1,
+    id: 2,
     title: "Netflix Data Anlaysis",
     date: "Nov 2022 - Nov 2022",
     description:
       "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-    image:
-      netflixDashboard,
-    tags: ["Tableau", "Data Visualization",],
+    image: netflixDashboard,
+    tags: ["Tableau", "Data Visualization"],
     category: "data analysis",
-    webapp: "https://public.tableau.com/views/NetflixAnalysis_16945626749390/Netflix?:language=en-GB&:display_count=n&:origin=viz_share_link",
+    webapp:
+      "https://public.tableau.com/views/NetflixAnalysis_16945626749390/Netflix?:language=en-GB&:display_count=n&:origin=viz_share_link",
   },
   {
-    id: 2,
+    id: 3,
     title: "COVID Application",
     date: "August 2021 - September 2021",
     description:
       "The COVID-19 App, developed with Android Studio, is a versatile application that serves as a one-stop resource for COVID-19 information. It provides real-time data tracking, including cases and trends globally and locally. Users can access comprehensive vaccination information, including eligibility and appointment scheduling. The app offers essential COVID-19 guidelines and official resources for safety and testing. To facilitate navigation, it integrates Google Maps, helping users find testing centers and vaccination sites. With its user-friendly interface, the app ensures that users have quick and easy access to accurate and critical information, making it an invaluable tool in navigating the pandemic.",
-    image:
-      covidApp,
-    tags: [
-      "Java",
-      "XML",
-      "Android Studio",
-      "Google API"
-    ],
+    image: covidApp,
+    tags: ["Java", "XML", "Android Studio", "Google API"],
     category: "web app",
-    github: "https://github.com/therealmanraj/COVID"
+    github: "https://github.com/therealmanraj/COVID",
   },
   {
-    id: 3,
-    title: "Building an automated model to predict and detect early onset osteoarthritis.",
+    id: 4,
+    title:
+      "Building an automated model to predict and detect early onset osteoarthritis.",
     date: "January 2023 - June 2023",
     description:
       "This research targets the need to provide early detection of osteoarthritis to assist the ongoing global effort to make treatment of this disease viable and effective. With regards to the rapid degradation of the condition, it is critical to detect it early enough so that suppressive treatment can reduce symptoms and progression. Using an approach of automation via efficient data analysis, it is possible to detect arthritis quite early in a patient’s diagnostics. This paper aims to provide both a statistical and a more direct approach to the determination of the probability of osteoarthritis at early onset to improve the odds for a patient. The system will take primary variables from a patient's file and look for patterns matching cases in the dataset it was trained against. The dataset for the same has been taken from the NIH archive for academic purposes.",
-    image:
-      arthResearchPaper,
-    tags: ["Python", "Machine Learning","Pandas","SciKit Learn"],
+    image: arthResearchPaper,
+    tags: ["Python", "Machine Learning", "Pandas", "SciKit Learn"],
     category: "research paper",
     github: "https://github.com/therealmanraj/arthDetector",
     paper: "https://ieeexplore.ieee.org/document/10262572",
