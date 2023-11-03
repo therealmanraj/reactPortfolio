@@ -3,6 +3,8 @@ import arthResearchPaper from "../images/arthResearchPaper.png";
 import covidApp from "../images/covidApp.jpeg";
 import netflixDashboard from "../images/netflixDashboard.png";
 import BankChurnAnalysis from "../images/BankChurnAnalysis.png";
+import finanseerMERN from "../images/finanseerMERN.jpeg";
+import cryptoWhiz from "../images/cryptoWhiz.jpeg";
 
 export const Bio = {
   name: "Manraj Singh",
@@ -237,17 +239,6 @@ export const projects = [
   },
   {
     id: 3,
-    title: "COVID Application",
-    date: "August 2021 - September 2021",
-    description:
-      "The COVID-19 App, developed with Android Studio, is a versatile application that serves as a one-stop resource for COVID-19 information. It provides real-time data tracking, including cases and trends globally and locally. Users can access comprehensive vaccination information, including eligibility and appointment scheduling. The app offers essential COVID-19 guidelines and official resources for safety and testing. To facilitate navigation, it integrates Google Maps, helping users find testing centers and vaccination sites. With its user-friendly interface, the app ensures that users have quick and easy access to accurate and critical information, making it an invaluable tool in navigating the pandemic.",
-    image: covidApp,
-    tags: ["Java", "XML", "Android Studio", "Google API"],
-    category: "web app",
-    github: "https://github.com/therealmanraj/COVID",
-  },
-  {
-    id: 4,
     title:
       "Building an automated model to predict and detect early onset osteoarthritis.",
     date: "January 2023 - June 2023",
@@ -258,5 +249,40 @@ export const projects = [
     category: "research paper",
     github: "https://github.com/therealmanraj/arthDetector",
     paper: "https://ieeexplore.ieee.org/document/10262572",
+  },
+  {
+    id: 4,
+    title: "Finanseer",
+    date: "September 2023 - November 2023",
+    description:
+      "A cutting-edge MERN stack financial dashboard with machine learning predictions. Powered by Vite, Redux Toolkit, and Material UI for the frontend, and Node.js, Express.js, and MongoDB for the backend, Finanseer offers dynamic financial charts and real-time data updates. It currently uses dummy data to demonstrate its potential for handling real financial data. As both a software developer and data analyst, I'm excited to bridge the gap between these roles. Whether you're an experienced investor or new to finance, our user-friendly Material UI design ensures a seamless experience. ",
+    image: finanseerMERN,
+    tags: ["MERN", "Machine Learning", "CI/CD"],
+    category: "web app",
+    github: "https://github.com/therealmanraj/finanseer",
+    webapp: "https://neon-biscotti-086dd3.netlify.app/",
+  },
+  {
+    id: 5,
+    title: "CryptoWhiz",
+    date: "September 2023 - October 2023",
+    description:
+      "Introducing CryptWhiz! I'm thrilled to share my React app, CryptWhiz. While it may not be flawless, it's a testament to my skills in data visualization, APIs, and web development. CryptWhiz empowers users to track and visualize real-time cryptocurrency data. With API integration and interactive charts, it offers a user-friendly experience. ",
+    image: cryptoWhiz,
+    tags: ["React", "Machine Learning", "Rapid API"],
+    category: "web app",
+    github: "https://github.com/therealmanraj/cryptwhiz",
+    webapp: "https://lucent-sorbet-9e60d1.netlify.app/",
+  },
+  {
+    id: 6,
+    title: "COVID Application",
+    date: "August 2021 - September 2021",
+    description:
+      "The COVID-19 App, developed with Android Studio, is a versatile application that serves as a one-stop resource for COVID-19 information. It provides real-time data tracking, including cases and trends globally and locally. Users can access comprehensive vaccination information, including eligibility and appointment scheduling. The app offers essential COVID-19 guidelines and official resources for safety and testing. To facilitate navigation, it integrates Google Maps, helping users find testing centers and vaccination sites. With its user-friendly interface, the app ensures that users have quick and easy access to accurate and critical information, making it an invaluable tool in navigating the pandemic.",
+    image: covidApp,
+    tags: ["Java", "XML", "Android Studio", "Google API"],
+    category: "web app",
+    github: "https://github.com/therealmanraj/COVID",
   },
 ];
