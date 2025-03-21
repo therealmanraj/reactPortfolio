@@ -5,6 +5,7 @@ import netflixDashboard from "../images/netflixDashboard.png";
 import BankChurnAnalysis from "../images/BankChurnAnalysis.png";
 import finanseerMERN from "../images/finanseerMERN.jpeg";
 import cryptoWhiz from "../images/cryptoWhiz.jpeg";
+import appliedResearchDay from "../images/appliedResearchDay.jpeg";
 
 export const Bio = {
   name: "Manraj Singh",
@@ -108,11 +109,6 @@ export const skills = [
     title: "Others",
     skills: [
       {
-        name: "Git",
-        image:
-          "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
-      },
-      {
         name: "GitHub",
         image:
           "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
@@ -123,9 +119,9 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
       {
-        name: "Figma",
+        name: "Canva",
         image:
-          "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
+          "https://yt3.googleusercontent.com/M7S2_gnnaJT5buAfWW4tanX9NELz5PddzNCQgnRV1oP8t12s5pg4cYKMChkEoh8gtGX__KtcYKU=s900-c-k-c0x00ffffff-no-rj",
       },
     ],
   },
@@ -134,6 +130,23 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3YEFx3Ec7AyA5xoNIkuG10gHN3WuGVokqZg&s",
+    role: "Research Assistant",
+    company: "Applied Research Centre",
+    date: "September 2024 - Current",
+    desc: "Worked as a Co-Op student with the strategic alignment team. Day to day tasks were to provide analysis and create enterprise dashboards.",
+    skills: [
+      "Python",
+      "SQL",
+      "React JS",
+      "Node JS",
+      "Poster Making",
+      "Reporting",
+      "Data Analysis",
+    ],
+  },
+  {
+    id: 1,
     img: "https://play-lh.googleusercontent.com/S4SYraF727oJgsuEh8lEwV_RladmWJFML--52OQfjk71hV6S6n42tL-oXUXhlEJ3ng=s96-rw",
     role: "Data Analyst Co-Op",
     company: "AMD",
@@ -151,7 +164,7 @@ export const experiences = [
     // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
   },
   {
-    id: 1,
+    id: 2,
     img: "https://static.ambitionbox.com/assets/v2/images/rs:fit:200:200:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL3BsYW5ldC1lY29tLXNvbHV0aW9ucy5qcGc.webp",
     role: "AI Project Intern",
     company: "PECS",
@@ -160,7 +173,7 @@ export const experiences = [
     skills: ["Figma", "SQL", "Python"],
   },
   {
-    id: 2,
+    id: 3,
     img: "https://play-lh.googleusercontent.com/8t6U6HGuMnP1DAJYpb4U_fEwVA7fgaOBJYRyfPHM5OLZllGj-8tsmJhu6Y4ikMrGpZg=w480-h960-rw",
     role: "Internshala Student Partner 27",
     company: "Internshala",
@@ -182,7 +195,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://scontent.fjrh2-1.fna.fbcdn.net/v/t39.30808-6/324413402_697617598583481_9009743074271434390_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DayWgmKKTEMAX9VIk2P&_nc_ht=scontent.fjrh2-1.fna&oh=00_AfDMw7-KLC0rxpnu-G9unlVWdf5Of2UxCf4jfhl7OtpftQ&oe=652AF252",
+    img: "https://www.amity.edu/images/amity_logo.png",
     school: "Amity University, Noida",
     date: "July 2019 - June 2023",
     grade: "7.59 CGPA",
@@ -191,7 +204,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://scontent.fjrh2-1.fna.fbcdn.net/v/t39.30808-1/355145948_756542549809517_887541637404311690_n.jpg?stp=cp0_dst-jpg_e15_fr_q65&_nc_cat=106&ccb=1-7&_nc_sid=5fac6f&_nc_ohc=kt7hfZ2Za60AX-F3tJp&_nc_ht=scontent.fjrh2-1.fna&oh=00_AfANqK7P_ZXHJDAIRp4W2ihgWSDORezUBidmpQfL4ye31A&oe=652C0E70",
+    img: "https://www.vrmvk.org/sites/default/files/gva-sliderlayer-upload/vkvlogo1_small_shadow-wpbjfc.png",
     school: "Vivekananda Kendra Vidyalaya, Dibrugarh",
     date: "Apr 2017 - Apr 2019",
     grade: "85.6%",
@@ -293,5 +306,37 @@ export const projects = [
     tags: ["Java", "XML", "Android Studio", "Google API"],
     category: "web app",
     github: "https://github.com/therealmanraj/COVID",
+  },
+];
+
+export const pictures = [
+  {
+    id: 0,
+    title: "Applied Research Day",
+    image: appliedResearchDay,
+  },
+  {
+    id: 1,
+    title: "Langara Alumni and Student networking",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5622AQGnRD_Om36QKQ/feedshare-shrink_2048_1536/B56ZW3AlaAGsAo-/0/1742532139330?e=1745452800&v=beta&t=gGISwWezQ5WqBy5NpTNgoWauJAjQ01p1B_mdKHtdSdo",
+  },
+  {
+    id: 2,
+    title: "Langara Makerspace Team",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5622AQFiSlo3rL0Cfg/feedshare-shrink_2048_1536/B56ZV9cj9uHsAo-/0/1741566405534?e=1745452800&v=beta&t=jfEt66N9V55thIfwtK36MbAk53yEZsL2aotETxQJ-n8",
+  },
+  {
+    id: 3,
+    title: "Me and Derica",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5622AQEdVnoI0SvX3Q/feedshare-shrink_2048_1536/B56ZV9cj9uGQAo-/0/1741566402497?e=1745452800&v=beta&t=KONEA8sRpbCmq7yiqiyeCYFuSErHQ3fWGqao30REc0Y",
+  },
+  {
+    id: 4,
+    title: "Team SAA",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D2DAQE6h4LCo9tGoQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1689092630459?e=1743206400&v=beta&t=sEPwz7ZcMYgoClcHa2vWXUmC2ognPho692xmOUBYKFE",
   },
 ];
