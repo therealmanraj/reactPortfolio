@@ -1,7 +1,14 @@
+// src/components/Pictures/PictureStyle.js
+
 import styled from "styled-components";
 
+/* Matches the Projects container styling (gradient, clip-path, etc.) */
 export const Container = styled.div`
-  background: #1b1c1e;
+  background: linear-gradient(
+    343.07deg,
+    rgba(132, 59, 206, 0.06) 5.71%,
+    rgba(132, 59, 206, 0) 64.83%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,6 +21,8 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   max-width: 1350px;
@@ -21,7 +30,6 @@ export const Wrapper = styled.div`
   gap: 12px;
   @media (max-width: 960px) {
     flex-direction: column;
-    align-items: center;
   }
 `;
 
@@ -30,7 +38,7 @@ export const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
-  color: #ffffff;
+  color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
@@ -41,98 +49,107 @@ export const Desc = styled.div`
   font-size: 18px;
   text-align: center;
   max-width: 600px;
-  margin: 0 auto;
-  color: #c2c2c2;
+  color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 16px;
   }
 `;
 
-/**
- * Grid layout: 3 columns on large screens, 1 column on smaller screens.
- * Adjust as needed for 2 columns if you prefer.
- */
+/* CardContainer: same spacing & layout as Projects */
 export const CardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
   width: 100%;
   padding: 20px;
-  justify-items: center;
-
-  @media (max-width: 960px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
+/* Card styling (hover, box-shadow) matching ProjectCards */
 export const Card = styled.div`
-  background-color: #292d3e;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  width: 90%;
-  max-width: 400px;
-  height: 420px; /* fixed height for consistency */
+  width: 330px;
+  height: 380px;
+  background-color: ${({ theme }) => theme.card};
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  padding: 26px 20px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  text-align: center;
-  padding: 16px;
-  box-sizing: border-box;
+  gap: 14px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.1);
+  }
 `;
 
 export const CardImageWrapper = styled.div`
   width: 100%;
-  height: 220px;
-  border-radius: 8px;
+  height: 180px;
+  background-color: ${({ theme }) => theme.white};
+  border-radius: 10px;
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  margin-bottom: 12px;
+  position: relative;
 `;
 
-/**
- * We add fade-in/fade-out transitions here via "fadeIn" prop.
- *
- * "opacity" toggles between 0 and 1.
- * The transition ensures a smooth fade effect over 0.3s.
- */
+/* For single images in the card */
 export const StyledImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-
-  /* Fade in/out logic */
-  opacity: ${({ fadeIn }) => (fadeIn ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
+  opacity: ${({ fadeIn }) => (fadeIn ? 1 : 0)};
+`;
+
+/* For preview videos in the card (muted + loop) */
+export const StyledVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+  opacity: ${({ fadeIn }) => (fadeIn ? 1 : 0)};
+  border-radius: 10px;
 `;
 
 export const CardTitle = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 6px;
+  color: ${({ theme }) => theme.text_secondary};
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const CardDescription = styled.div`
   font-size: 14px;
-  color: #d1d1d1;
-  margin: 0 0 8px 0;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary + 99};
+  margin-top: 8px;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
-/**
- * The SlideWrapper is a container for the image
- * that lets us position the slide counter absolutely.
- */
+/* For multiple images in the card (auto-slideshow) */
 export const SlideWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
 `;
 
-/**
- * SlideCounter is positioned in the bottom-right corner
- * with a semi-transparent background.
- */
 export const SlideCounter = styled.div`
   position: absolute;
   bottom: 8px;
