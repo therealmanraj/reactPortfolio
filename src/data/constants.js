@@ -16,9 +16,9 @@ import snowboarding_3 from "../images/Snowboarding3.JPG";
 
 export const Bio = {
   name: "Manraj Singh",
-  roles: ["Data Analyst", "Full Stack Developer", "Guitarist"],
+  roles: ["Data Analyst", "Guitarist"],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "Welcome to my e-portfolio, and thank you for taking the time to look at my work. This space serves as a snapshot of my career journey, showcasing the technical skills I’ve honed, the projects I’ve delivered, and the professional experiences that have shaped my approach to problem-solving. Creating it has been a deeply personal endeavor, reflecting the hours I’ve spent learning, growing, and refining my craft. Each project here represents a piece of my story; a testament to my passion for turning challenges into opportunities. If my skills journey resonates with you, I invite you to explore further, connect with me, and consider how we might work together in the future. Thank you again for visiting, and I hope you find something here that sparks inspiration.",
   github: "https://github.com/therealmanraj",
   resume:
     "https://drive.google.com/drive/folders/1z4-RrdOD49IfqNwezM1xpWt3wF1WkWuX?usp=sharing",
@@ -28,7 +28,7 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Frontend",
+    title: "Web Development",
     skills: [
       {
         name: "React JS",
@@ -36,33 +36,14 @@ export const skills = [
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
-        name: "HTML",
-        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
-      },
-      {
-        name: "CSS",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
-      },
-      {
         name: "JavaScript",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
-      },
-      {
         name: "Material UI",
         image: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
       },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
       {
         name: "Node JS",
         image: "https://nodejs.org/static/images/logo.svg",
@@ -70,19 +51,6 @@ export const skills = [
       {
         name: "Express JS",
         image: "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
-      },
-      {
-        name: "Graph Ql",
-        image: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
-      },
-      {
-        name: "MongoDB",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-      },
-      {
-        name: "Firebase",
-        image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
       },
     ],
   },
@@ -113,7 +81,7 @@ export const skills = [
     ],
   },
   {
-    title: "Others",
+    title: "Tools",
     skills: [
       {
         name: "GitHub",
@@ -132,6 +100,33 @@ export const skills = [
       },
     ],
   },
+  {
+    title: "Soft Skills",
+    skills: [
+      {
+        name: "Adaptability",
+        image: "https://cdn-icons-png.flaticon.com/512/10108/10108220.png",
+      },
+      {
+        name: "Communication",
+        image:
+          "https://img.icons8.com/?size=100&id=54385&format=png&color=FFFFFF",
+      },
+      {
+        name: "Teamwork",
+        image: "https://cdn-icons-png.flaticon.com/512/7086/7086327.png",
+      },
+      {
+        name: "Problem-Solving",
+        image:
+          "https://cdn-icons-png.freepik.com/256/8553/8553558.png?semt=ais_hybrid",
+      },
+      {
+        name: "Time Management",
+        image: "https://cdn-icons-png.flaticon.com/512/9815/9815843.png",
+      },
+    ],
+  },
 ];
 
 export const experiences = [
@@ -141,7 +136,7 @@ export const experiences = [
     role: "Research Assistant",
     company: "Applied Research Centre",
     date: "September 2024 - Current",
-    desc: "Worked as a Co-Op student with the strategic alignment team. Day to day tasks were to provide analysis and create enterprise dashboards.",
+    desc: "Optimized data pipelines to predict HVAC usage and maintenance needs, achieving a 9% reduction in energy consumption. Engineered sustainable solutions for campus projects, boosting efficiency by 15%.",
     skills: [
       "Python",
       "SQL",
@@ -158,7 +153,7 @@ export const experiences = [
     role: "Data Analyst Co-Op",
     company: "AMD",
     date: "June 2022 - June 2023",
-    desc: "Worked as a Co-Op student with the strategic alignment team. Day to day tasks were to provide analysis and create enterprise dashboards.",
+    desc: "Developed interactive dashboards to streamline cross-team collaboration, cutting manual reporting by 15 hours/week. Integrated advanced analytics in Power BI to provide real-time insights for executive decisions.",
     skills: [
       "Python",
       "SQL",
@@ -168,8 +163,9 @@ export const experiences = [
       "Microsoft Excel",
       "Flask",
     ],
-    // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
   },
+
+  // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
   {
     id: 2,
     img: "https://static.ambitionbox.com/assets/v2/images/rs:fit:200:200:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL3BsYW5ldC1lY29tLXNvbHV0aW9ucy5qcGc.webp",
@@ -320,9 +316,10 @@ export const pictures = [
   {
     id: 0,
     title: "Applied Research Day",
-    images: [Presenting, appliedResearchDay, RecTeam, ARD],
     type: "image",
-    description: "Presented my project during the Applied Research Day",
+    images: [Presenting, appliedResearchDay, RecTeam, ARD],
+    description:
+      "I presented my work on building 'SQL Beyond,' a gamified SQL learning platform. I also collaborated with the Langara Recreation department to design promotional posters—an amazing blend of data, creativity, and campus engagement!",
   },
   {
     id: 1,
@@ -330,6 +327,8 @@ export const pictures = [
     type: "image",
     image:
       "https://media.licdn.com/dms/image/v2/D5622AQGnRD_Om36QKQ/feedshare-shrink_2048_1536/B56ZW3AlaAGsAo-/0/1742532139330?e=1745452800&v=beta&t=gGISwWezQ5WqBy5NpTNgoWauJAjQ01p1B_mdKHtdSdo",
+    description:
+      "Attended a fantastic alumni meet where I connected with incredible people—exchanging stories, experiences, and forging new friendships along the way.",
   },
   {
     id: 2,
@@ -343,20 +342,24 @@ export const pictures = [
       "https://media.licdn.com/dms/image/v2/D5622AQFakwA8iPh-xw/feedshare-shrink_2048_1536/B56ZV9ckASGQAs-/0/1741566406682?e=1745452800&v=beta&t=vUCYRqvt_OFv2qJXaTJrnA-eu9_VcMQ0yWE5Nl4LJ_4",
       "https://media.licdn.com/dms/image/v2/D5622AQEdVnoI0SvX3Q/feedshare-shrink_2048_1536/B56ZV9cj9uGQAo-/0/1741566402497?e=1745452800&v=beta&t=KONEA8sRpbCmq7yiqiyeCYFuSErHQ3fWGqao30REc0Y",
     ],
+    description:
+      "As a Research Assistant, I helped build a reusable plastic heat press machine for the Vancouver maker space. This project fused sustainability, hands-on engineering, and creative problem-solving—a truly rewarding experience.",
   },
   {
     id: 4,
     title: "Grouse Mountain",
     type: "image",
     images: [snowboarding_1, snowboarding_2, snowboarding_3],
-    description: "Snowboarding trip to grouse mountain",
+    description:
+      "I went on a breathtaking snowboarding trip to Grouse Mountain—fresh powder, stunning views, and an unforgettable adventure on the slopes!",
   },
   {
     id: 5,
     title: "Guitar Jam",
     type: "video",
     video: guitarJam1,
-    description: "A minor guitar jam",
+    description:
+      "I play guitar, and this jam in A minor is one of my favorites. Music has always been a passion—there’s nothing like the thrill of improvising a fresh riff!",
   },
   {
     id: 6,
@@ -364,5 +367,7 @@ export const pictures = [
     type: "image",
     image:
       "https://media.licdn.com/dms/image/v2/D4D2DAQE6h4LCo9tGoQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1689092630459?e=1743206400&v=beta&t=sEPwz7ZcMYgoClcHa2vWXUmC2ognPho692xmOUBYKFE",
+    description:
+      "My incredible AMD Team SAA—the Indian team—where I worked as a Data Analyst Co-Op. I made lifelong friends here, and our camaraderie remains strong!",
   },
 ];

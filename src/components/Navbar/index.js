@@ -37,7 +37,7 @@ const Navbar = () => {
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
           <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#pictures">Pictures</NavLink>
+          <NavLink href="#pictures">Moments & Media</NavLink>
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
@@ -78,6 +78,14 @@ const Navbar = () => {
               }}
             >
               Projects
+            </MobileLink>
+            <MobileLink
+              href="#pictures"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
+              Moments & Media
             </MobileLink>
             <MobileLink
               href="#education"

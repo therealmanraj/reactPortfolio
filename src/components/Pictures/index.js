@@ -400,9 +400,12 @@ export default function Pictures() {
     <>
       <Container id="pictures">
         <Wrapper>
-          <Title>Pictures (and Videos)</Title>
+          <Title>Moments & Media</Title>
           <Desc>
-            I love taking pictures (and videos). Here are some of my favorites:
+            Life is a tapestry of moments, and these photos and videos are some
+            of my most cherished threads. Dive in to see the places I’ve
+            explored, the music I’ve created, and the incredible people I’ve met
+            along the way.
           </Desc>
 
           <CardContainer>
