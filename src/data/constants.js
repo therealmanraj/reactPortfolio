@@ -335,8 +335,8 @@ export const pictures = [
     title: "Langara Makerspace Team",
     type: "image",
     images: [
-      "https://media.licdn.com/dms/image/v2/D5622AQGx1cjNsfoBKA/feedshare-shrink_2048_1536/B56ZV9cj9jHsAo-/0/1741566398825?e=1745452800&v=beta&t=C2ZnMEdcPYY81xXiAlhdmIjtaQouPoN2dFUuEDmasqk",
       "https://media.licdn.com/dms/image/v2/D5622AQFiSlo3rL0Cfg/feedshare-shrink_2048_1536/B56ZV9cj9uHsAo-/0/1741566405534?e=1745452800&v=beta&t=jfEt66N9V55thIfwtK36MbAk53yEZsL2aotETxQJ-n8",
+      "https://media.licdn.com/dms/image/v2/D5622AQGx1cjNsfoBKA/feedshare-shrink_2048_1536/B56ZV9cj9jHsAo-/0/1741566398825?e=1745452800&v=beta&t=C2ZnMEdcPYY81xXiAlhdmIjtaQouPoN2dFUuEDmasqk",
       "https://media.licdn.com/dms/image/v2/D5622AQFYm0UzA0KR_Q/feedshare-shrink_2048_1536/B56ZV9cj_FGsAo-/0/1741566406566?e=1745452800&v=beta&t=qnPa1OozorXoE1ogPmAolJwFSPXxaiKCsCZsTH8HMu8",
       "https://media.licdn.com/dms/image/v2/D5622AQHCsaDK5UKWRQ/feedshare-shrink_1280/B56ZV9cj9qGUAk-/0/1741566405935?e=1745452800&v=beta&t=Dgyj924OJAzb9eDQcTYxZTcHVqSogU7DcrYMQ7CcrA4",
       "https://media.licdn.com/dms/image/v2/D5622AQFakwA8iPh-xw/feedshare-shrink_2048_1536/B56ZV9ckASGQAs-/0/1741566406682?e=1745452800&v=beta&t=vUCYRqvt_OFv2qJXaTJrnA-eu9_VcMQ0yWE5Nl4LJ_4",
