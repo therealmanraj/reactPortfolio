@@ -72,6 +72,9 @@ const CardContainer = styled.div`
   padding: 20px;
 `;
 
+/**
+ * Updated Card with a subtle hover transition
+ */
 const Card = styled.div`
   background-color: #292d3e;
   border-radius: 12px;
@@ -85,7 +88,15 @@ const Card = styled.div`
   text-align: center;
   padding: 16px;
   box-sizing: border-box;
-  cursor: pointer; /* indicate it's clickable */
+  cursor: pointer;
+
+  /* Smooth hover effect on transform and box-shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  }
 `;
 
 const CardImageWrapper = styled.div`
@@ -281,12 +292,7 @@ const PictureModal = ({ picture, setOpenModal }) => {
 
   if (!picture) return null;
 
-  // If multiple images or videos are present, you could store them in an array.
-  // For simplicity, let's handle:
-  // - type: "video" => single video
-  // - type: "image" => either "image" or "images" array
   const closeModal = () => setOpenModal({ state: false, picture: null });
-
   const isVideo = picture.type === "video";
 
   // If it's an image card with multiple images

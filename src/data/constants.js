@@ -21,12 +21,38 @@ export const Bio = {
     "Welcome to my e-portfolio, and thank you for taking the time to look at my work. This space serves as a snapshot of my career journey, showcasing the technical skills I’ve honed, the projects I’ve delivered, and the professional experiences that have shaped my approach to problem-solving. Creating it has been a deeply personal endeavor, reflecting the hours I’ve spent learning, growing, and refining my craft. Each project here represents a piece of my story; a testament to my passion for turning challenges into opportunities. If my skills journey resonates with you, I invite you to explore further, connect with me, and consider how we might work together in the future. Thank you again for visiting, and I hope you find something here that sparks inspiration.",
   github: "https://github.com/therealmanraj",
   resume:
-    "https://drive.google.com/drive/folders/1z4-RrdOD49IfqNwezM1xpWt3wF1WkWuX?usp=sharing",
+    "https://drive.google.com/file/d/1rt42ZLWdk1crN8d9oINuAVvdtrLNZ1f_/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/therealmanraj/",
   twitter: "https://twitter.com/imtherealmanraj",
 };
 
 export const skills = [
+  {
+    title: "Data Analysis",
+    skills: [
+      {
+        name: "Python",
+        image: "https://www.vectorlogo.zone/logos/python/python-icon.svg",
+      },
+      {
+        name: "MySQL",
+        image: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
+      },
+      {
+        name: "Power BI",
+        image:
+          "https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg",
+      },
+      {
+        name: "Tableau",
+        image: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg",
+      },
+      {
+        name: "Microsoft Office",
+        image: "https://cdn.worldvectorlogo.com/logos/office-1.svg",
+      },
+    ],
+  },
   {
     title: "Web Development",
     skills: [
@@ -51,32 +77,6 @@ export const skills = [
       {
         name: "Express JS",
         image: "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
-      },
-    ],
-  },
-  {
-    title: "Data Analysis",
-    skills: [
-      {
-        name: "Python",
-        image: "https://www.vectorlogo.zone/logos/python/python-icon.svg",
-      },
-      {
-        name: "MySQL",
-        image: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
-      },
-      {
-        name: "Power BI",
-        image:
-          "https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg",
-      },
-      {
-        name: "Tableau",
-        image: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg",
-      },
-      {
-        name: "Microsoft Office",
-        image: "https://cdn.worldvectorlogo.com/logos/office-1.svg",
       },
     ],
   },
