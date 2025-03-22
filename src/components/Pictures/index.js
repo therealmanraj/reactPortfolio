@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Wrapper,
   Title,
   Desc,
   CardContainer,
-} from "./ProjectsStyle";
+  Card,
+  CardImageWrapper,
+  CardTitle,
+  CardDescription,
+  StyledImage,
+} from "./PicturesStyle";
 import { pictures } from "../../data/constants";
+
+// Carousel for multiple images
+const Carousel = ({ images, alt }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [images]);
+
+  return <StyledImage src={images[currentIndex]} alt={alt} />;
+};
 
 const Pictures = () => {
   return (
@@ -16,24 +35,20 @@ const Pictures = () => {
         <Desc>I love taking pictures. Here are some of my favorite shots:</Desc>
         <CardContainer>
           {pictures.map((picture) => (
-            <div
-              key={picture.id}
-              style={{ margin: "10px", textAlign: "center" }}
-            >
-              <img
-                src={picture.image}
-                alt={picture.title}
-                style={{
-                  width: "300px",
-                  height: "auto",
-                  borderRadius: "8px",
-                  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-                }}
-              />
-              <div style={{ marginTop: "8px", fontSize: "16px" }}>
-                {picture.title}
-              </div>
-            </div>
+            <Card key={picture.id}>
+              <CardImageWrapper>
+                {/* If multiple images exist, use carousel; otherwise show single image */}
+                {picture.images ? (
+                  <Carousel images={picture.images} alt={picture.title} />
+                ) : (
+                  <StyledImage src={picture.image} alt={picture.title} />
+                )}
+              </CardImageWrapper>
+              <CardTitle>{picture.title}</CardTitle>
+              {picture.description && (
+                <CardDescription>{picture.description}</CardDescription>
+              )}
+            </Card>
           ))}
         </CardContainer>
       </Wrapper>

@@ -6,6 +6,13 @@ import BankChurnAnalysis from "../images/BankChurnAnalysis.png";
 import finanseerMERN from "../images/finanseerMERN.jpeg";
 import cryptoWhiz from "../images/cryptoWhiz.jpeg";
 import appliedResearchDay from "../images/appliedResearchDay.jpeg";
+import ARD from "../images/ARD.JPG";
+import Presenting from "../images/Presenting.JPG";
+import RecTeam from "../images/RecTeam.JPG";
+import snowboarding_1 from "../images/Snowboarding1.JPG";
+import snowboarding_2 from "../images/Snowboarding2.JPG";
+import snowboarding_3 from "../images/Snowboarding3.JPG";
+import { Snowboarding } from "@mui/icons-material";
 
 export const Bio = {
   name: "Manraj Singh",
@@ -313,7 +320,8 @@ export const pictures = [
   {
     id: 0,
     title: "Applied Research Day",
-    image: appliedResearchDay,
+    images: [Presenting, appliedResearchDay, RecTeam, ARD],
+    description: "Presented my project during the Applied Research Day",
   },
   {
     id: 1,
@@ -324,17 +332,23 @@ export const pictures = [
   {
     id: 2,
     title: "Langara Makerspace Team",
-    image:
+    images: [
+      "https://media.licdn.com/dms/image/v2/D5622AQGx1cjNsfoBKA/feedshare-shrink_2048_1536/B56ZV9cj9jHsAo-/0/1741566398825?e=1745452800&v=beta&t=C2ZnMEdcPYY81xXiAlhdmIjtaQouPoN2dFUuEDmasqk",
       "https://media.licdn.com/dms/image/v2/D5622AQFiSlo3rL0Cfg/feedshare-shrink_2048_1536/B56ZV9cj9uHsAo-/0/1741566405534?e=1745452800&v=beta&t=jfEt66N9V55thIfwtK36MbAk53yEZsL2aotETxQJ-n8",
-  },
-  {
-    id: 3,
-    title: "Me and Derica",
-    image:
+      "https://media.licdn.com/dms/image/v2/D5622AQFYm0UzA0KR_Q/feedshare-shrink_2048_1536/B56ZV9cj_FGsAo-/0/1741566406566?e=1745452800&v=beta&t=qnPa1OozorXoE1ogPmAolJwFSPXxaiKCsCZsTH8HMu8",
+      "https://media.licdn.com/dms/image/v2/D5622AQHCsaDK5UKWRQ/feedshare-shrink_1280/B56ZV9cj9qGUAk-/0/1741566405935?e=1745452800&v=beta&t=Dgyj924OJAzb9eDQcTYxZTcHVqSogU7DcrYMQ7CcrA4",
+      "https://media.licdn.com/dms/image/v2/D5622AQFakwA8iPh-xw/feedshare-shrink_2048_1536/B56ZV9ckASGQAs-/0/1741566406682?e=1745452800&v=beta&t=vUCYRqvt_OFv2qJXaTJrnA-eu9_VcMQ0yWE5Nl4LJ_4",
       "https://media.licdn.com/dms/image/v2/D5622AQEdVnoI0SvX3Q/feedshare-shrink_2048_1536/B56ZV9cj9uGQAo-/0/1741566402497?e=1745452800&v=beta&t=KONEA8sRpbCmq7yiqiyeCYFuSErHQ3fWGqao30REc0Y",
+    ],
   },
   {
     id: 4,
+    title: "Grouse Mountain",
+    images: [snowboarding_1, snowboarding_2, snowboarding_3],
+    description: "Snowboarding trip to grouse mountain",
+  },
+  {
+    id: 5,
     title: "Team SAA",
     image:
       "https://media.licdn.com/dms/image/v2/D4D2DAQE6h4LCo9tGoQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1689092630459?e=1743206400&v=beta&t=sEPwz7ZcMYgoClcHa2vWXUmC2ognPho692xmOUBYKFE",
