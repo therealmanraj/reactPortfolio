@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-/* Dark background gradient or solid color, similar to your screenshot */
 export const Container = styled.div`
-  background: #1b1c1e; /* or a dark gradient if you prefer */
+  background: #1b1c1e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +30,7 @@ export const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
-  color: #ffffff; /* White text on dark background */
+  color: #ffffff;
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
@@ -42,9 +41,8 @@ export const Desc = styled.div`
   font-size: 18px;
   text-align: center;
   max-width: 600px;
-  margin: 0 auto; /* Add this to center horizontally */
-  color: ${({ theme }) => theme.text_secondary};
-
+  margin: 0 auto;
+  color: #c2c2c2;
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 16px;
@@ -52,46 +50,29 @@ export const Desc = styled.div`
 `;
 
 /**
- * Grid layout with two columns on larger screens.
- * Switches to single column below 960px.
+ * Grid layout: 3 columns on large screens, 1 column on smaller screens.
+ * Adjust as needed for 2 columns if you prefer.
  */
-// export const CardContainer = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   gap: 28px;
-//   width: 100%;
-//   padding: 20px;
-//   justify-items: center;
-
-//   @media (max-width: 960px) {
-//     grid-template-columns: 1fr;
-//   }
-// `;
-
 export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 28px; /* keeps the same gap between rows (optional) */
+  row-gap: 28px;
   width: 100%;
   padding: 20px;
   justify-items: center;
 
   @media (max-width: 960px) {
-    grid-template-columns: 1fr; /* single column on smaller screens */
+    grid-template-columns: 1fr;
   }
 `;
 
-/**
- * Dark card background with a "3D" effect shadow,
- * consistent height, and card-like styling.
- */
 export const Card = styled.div`
-  background-color: #292d3e; /* A dark, slightly purple-toned background */
+  background-color: #292d3e;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   width: 90%;
   max-width: 400px;
-  height: 420px; /* Fixed height for consistency */
+  height: 420px; /* fixed height for consistency */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -102,27 +83,29 @@ export const Card = styled.div`
 
 export const CardImageWrapper = styled.div`
   width: 100%;
-  height: 220px; /* Adjust as needed */
+  height: 220px;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 12px;
 `;
 
 /**
- * Fill the card image space while maintaining aspect ratio
- * and avoiding distortion.
+ * We add fade-in/fade-out transitions here via "fadeIn" prop.
+ *
+ * "opacity" toggles between 0 and 1.
+ * The transition ensures a smooth fade effect over 0.3s.
  */
 export const StyledImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+
+  /* Fade in/out logic */
+  opacity: ${({ fadeIn }) => (fadeIn ? 1 : 0)};
+  transition: opacity 0.3s ease-in-out;
 `;
 
-/**
- * Titles and descriptions in a lighter color
- * to stand out on the dark card background.
- */
 export const CardTitle = styled.div`
   font-size: 18px;
   font-weight: 600;
@@ -134,4 +117,30 @@ export const CardDescription = styled.div`
   font-size: 14px;
   color: #d1d1d1;
   margin: 0 0 8px 0;
+`;
+
+/**
+ * The SlideWrapper is a container for the image
+ * that lets us position the slide counter absolutely.
+ */
+export const SlideWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+/**
+ * SlideCounter is positioned in the bottom-right corner
+ * with a semi-transparent background.
+ */
+export const SlideCounter = styled.div`
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
 `;

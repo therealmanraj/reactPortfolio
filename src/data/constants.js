@@ -12,7 +12,6 @@ import RecTeam from "../images/RecTeam.JPG";
 import snowboarding_1 from "../images/Snowboarding1.JPG";
 import snowboarding_2 from "../images/Snowboarding2.JPG";
 import snowboarding_3 from "../images/Snowboarding3.JPG";
-import { Snowboarding } from "@mui/icons-material";
 
 export const Bio = {
   name: "Manraj Singh",
