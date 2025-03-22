@@ -96,6 +96,9 @@ const CardImageWrapper = styled.div`
   margin-bottom: 12px;
 `;
 
+/**
+ * For single images in the card
+ */
 const StyledImage = styled.img`
   width: 100%;
   height: 100%;
@@ -105,6 +108,21 @@ const StyledImage = styled.img`
   transition: opacity 0.3s ease-in-out;
 `;
 
+/**
+ * For preview videos in the card (muted + loop)
+ */
+const StyledVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: ${({ fadeIn }) => (fadeIn ? 1 : 0)};
+  transition: opacity 0.3s ease-in-out;
+`;
+
+/**
+ * Title + description
+ */
 const CardTitle = styled.div`
   font-size: 18px;
   font-weight: 600;
@@ -118,7 +136,10 @@ const CardDescription = styled.div`
   margin: 0 0 8px 0;
 `;
 
-/* If you still want the auto-slideshow in each card, keep the SlideWrapper etc. */
+/**
+ * Optional: If you do an auto-slideshow in each card,
+ * you can keep or remove this SlideWrapper + SlideCounter.
+ */
 const SlideWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -138,7 +159,7 @@ const SlideCounter = styled.div`
 `;
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   2. Modal styled components (Next/Prev for images in the same card)
+   2. Modal styled components (Next/Prev for images in the same card or video)
    ───────────────────────────────────────────────────────────────────────────── */
 
 const ModalOverlay = styled.div`
@@ -187,12 +208,15 @@ const CloseButton = styled.button`
 const ModalImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 60vh; /* or a fixed px height, e.g. 500px */
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
+/**
+ * For the modal image (object-fit: contain to show entire image)
+ */
 const ModalImage = styled.img`
   max-width: 100%;
   max-height: 100%;
@@ -200,6 +224,19 @@ const ModalImage = styled.img`
   border-radius: 10px;
 `;
 
+/**
+ * For the modal video (with controls so user can play sound)
+ */
+const ModalVideo = styled.video`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+`;
+
+/**
+ * Left/right arrow buttons
+ */
 const ArrowButton = styled.button`
   position: absolute;
   top: 50%;
@@ -236,38 +273,63 @@ const ModalDescription = styled.p`
 `;
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   3. PictureModal: cycles among the images of a SINGLE card
+   3. PictureModal: cycles among images or a single video
    ───────────────────────────────────────────────────────────────────────────── */
 
 const PictureModal = ({ picture, setOpenModal }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   if (!picture) return null;
 
-  const images = picture.images ?? [picture.image];
-
+  // If multiple images or videos are present, you could store them in an array.
+  // For simplicity, let's handle:
+  // - type: "video" => single video
+  // - type: "image" => either "image" or "images" array
   const closeModal = () => setOpenModal({ state: false, picture: null });
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
+  const isVideo = picture.type === "video";
 
+  // If it's an image card with multiple images
+  const images = picture.images ?? (picture.image ? [picture.image] : []);
+  const currentImage = images[currentIndex] || null;
+
+  // Next / Prev for multiple images
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
   const prevImage = () => {
-    setCurrentImageIndex((prev) => {
-      const newIndex = (prev - 1 + images.length) % images.length;
-      return newIndex;
-    });
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
     <ModalOverlay>
       <ModalContent>
         <CloseButton onClick={closeModal}>&times;</CloseButton>
+
         <ModalImageWrapper>
-          <ModalImage src={images[currentImageIndex]} alt={picture.title} />
-          {images.length > 1 && (
+          {isVideo ? (
+            /* Single video with controls */
+            <ModalVideo
+              src={picture.video}
+              controls
+              autoPlay={false} /* user must click play for sound */
+            />
+          ) : (
+            /* Show image or multiple images */
             <>
-              <LeftArrowButton onClick={prevImage}>&#10094;</LeftArrowButton>
-              <RightArrowButton onClick={nextImage}>&#10095;</RightArrowButton>
+              {currentImage && (
+                <ModalImage src={currentImage} alt={picture.title} />
+              )}
+              {images.length > 1 && (
+                <>
+                  <LeftArrowButton onClick={prevImage}>
+                    &#10094;
+                  </LeftArrowButton>
+                  <RightArrowButton onClick={nextImage}>
+                    &#10095;
+                  </RightArrowButton>
+                </>
+              )}
             </>
           )}
         </ModalImageWrapper>
@@ -282,7 +344,7 @@ const PictureModal = ({ picture, setOpenModal }) => {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   4. Optional Carousel for the card (auto slideshow in the card)
+   4. Optional Carousel for images in each card (auto slideshow)
    ───────────────────────────────────────────────────────────────────────────── */
 
 const Carousel = ({ images, alt }) => {
@@ -312,7 +374,7 @@ const Carousel = ({ images, alt }) => {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   5. Main Pictures component
+   5. Main Pictures component (cards with images or videos)
    ───────────────────────────────────────────────────────────────────────────── */
 
 export default function Pictures() {
@@ -321,6 +383,7 @@ export default function Pictures() {
     picture: null,
   });
 
+  // Lock body scroll when modal is open
   useEffect(() => {
     if (openModal.state) {
       document.body.style.overflow = "hidden";
@@ -337,32 +400,45 @@ export default function Pictures() {
     <>
       <Container id="pictures">
         <Wrapper>
-          <Title>Pictures</Title>
+          <Title>Pictures (and Videos)</Title>
           <Desc>
-            I love taking pictures. Here are some of my favorite shots:
+            I love taking pictures (and videos). Here are some of my favorites:
           </Desc>
 
           <CardContainer>
-            {pictures.map((picture) => (
-              <Card key={picture.id} onClick={() => handleCardClick(picture)}>
-                <CardImageWrapper>
-                  {picture.images ? (
-                    <Carousel images={picture.images} alt={picture.title} />
-                  ) : (
-                    <StyledImage
-                      src={picture.image}
-                      alt={picture.title}
-                      fadeIn
-                    />
-                  )}
-                </CardImageWrapper>
+            {pictures.map((picture) => {
+              const isVideo = picture.type === "video";
 
-                <CardTitle>{picture.title}</CardTitle>
-                {picture.description && (
-                  <CardDescription>{picture.description}</CardDescription>
-                )}
-              </Card>
-            ))}
+              return (
+                <Card key={picture.id} onClick={() => handleCardClick(picture)}>
+                  <CardImageWrapper>
+                    {isVideo ? (
+                      /* For the card preview, show a muted auto-play loop (optional) */
+                      <StyledVideo
+                        src={picture.video}
+                        muted
+                        loop
+                        autoPlay
+                        fadeIn
+                      />
+                    ) : picture.images ? (
+                      <Carousel images={picture.images} alt={picture.title} />
+                    ) : (
+                      <StyledImage
+                        src={picture.image}
+                        alt={picture.title}
+                        fadeIn
+                      />
+                    )}
+                  </CardImageWrapper>
+
+                  <CardTitle>{picture.title}</CardTitle>
+                  {picture.description && (
+                    <CardDescription>{picture.description}</CardDescription>
+                  )}
+                </Card>
+              );
+            })}
           </CardContainer>
         </Wrapper>
       </Container>
