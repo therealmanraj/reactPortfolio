@@ -16,7 +16,7 @@ const Button = styled.button`
 `;
 const Card = styled.div`
   width: 330px;
-  height: 490px;
+  height: max-content;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;

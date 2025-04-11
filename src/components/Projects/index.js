@@ -51,6 +51,23 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
           <Divider />
+          {toggle === "data science" ? (
+            <ToggleButton
+              active
+              value="data science"
+              onClick={() => setToggle("data science")}
+            >
+              DATA SCIENCE
+            </ToggleButton>
+          ) : (
+            <ToggleButton
+              value="data science"
+              onClick={() => setToggle("data science")}
+            >
+              DATA SCIENCE
+            </ToggleButton>
+          )}
+          <Divider />
           {toggle === "web app" ? (
             <ToggleButton
               active
@@ -64,7 +81,7 @@ const Projects = ({ openModal, setOpenModal }) => {
               WEB APP
             </ToggleButton>
           )}
-          <Divider />
+          {/* <Divider />
           {toggle === "research paper" ? (
             <ToggleButton
               active
@@ -80,7 +97,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             >
               RESEARCH PAPER
             </ToggleButton>
-          )}
+          )} */}
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === "all" &&

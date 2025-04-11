@@ -1,7 +1,11 @@
 import coffeeSales from "../images/coffeeSales.png";
-import arthResearchPaper from "../images/arthResearchPaper.png";
+// import arthResearchPaper from "../images/arthResearchPaper.png";
+import breakingBarriers from "../images/breakingBarriers.jpg";
 import covidApp from "../images/covidApp.jpeg";
-import netflixDashboard from "../images/netflixDashboard.png";
+import coswara from "../images/coswara.jpg";
+import medallionArch from "../images/medallionArch.webp";
+import competitveAnalysis from "../images/competitveAnalysis.png";
+import creditCard from "../images/creditCard.jpeg";
 import BankChurnAnalysis from "../images/BankChurnAnalysis.png";
 import finanseerMERN from "../images/finanseerMERN.jpeg";
 import cryptoWhiz from "../images/cryptoWhiz.jpeg";
@@ -13,6 +17,7 @@ import RecTeam from "../images/RecTeam.JPG";
 import snowboarding_1 from "../images/Snowboarding1.JPG";
 import snowboarding_2 from "../images/Snowboarding2.JPG";
 import snowboarding_3 from "../images/Snowboarding3.JPG";
+import teamSAA from "../images/teamSAA.jpeg";
 
 export const Bio = {
   name: "Manraj Singh",
@@ -228,8 +233,7 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "Bank Churn Analysis",
-    date: "Dec 2022 - Dec 2022",
+    title: "Bank of Europe Churn Analysis",
     description:
       "Led an impactful project within the banking sector, orchestrating data-driven strategies to reduce customer churn across three countries: France, Germany, and Spain. By segmenting customers, age profiling, and personalized communication, we tailored retention plans. We addressed country-specific issues, with a focus on Germany, and targeted high-churn age groups like 35-40. The project emphasized feedback integration, employee training, and predictive analytics for proactive churn management.",
     image: BankChurnAnalysis,
@@ -241,7 +245,6 @@ export const projects = [
   {
     id: 1,
     title: "Coffee Sales Dashboard",
-    date: "Nov 2022 - Nov 2022",
     description:
       "The Coffee Sales Dashboard is an Excel project that provides visualized insights into coffee sales data. The dashboard features a dynamic line chart displaying the total sales of various coffee roast types over time. Additionally, it includes a bar chart to showcase the top 5 customers and another bar chart to illustrate sales by country. Users can customize their analysis through interactive elements, including a timeline selector for choosing specific date ranges, a roast type selector to compare different coffee varieties, and size and loyalty selectors for tailored filtering. Key Excel features used in the project include charts, data validation, pivot tables, slicers, named ranges, and conditional formatting to enhance data presentation and user interactivity.",
     image: coffeeSales,
@@ -252,33 +255,73 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Netflix Data Anlaysis",
-    date: "Nov 2022 - Nov 2022",
+    title: "COSWARA Audio Analysis and Classification Model",
     description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-    image: netflixDashboard,
-    tags: ["Tableau", "Data Visualization"],
-    category: "data analysis",
-    webapp:
-      "https://public.tableau.com/views/NetflixAnalysis_16945626749390/Netflix?:language=en-GB&:display_count=n&:origin=viz_share_link",
+      "EDA and statistical tests showed significant variations in audio features across age, gender, and health status. Automated data preprocessing and feature extraction, improving the efficiency and accuracy of the analysis. Engineered a model to classify COVID-19 status from mel spectrograms, achieving 81.54% accuracy.",
+    image: coswara,
+    tags: ["Python", "Data Visualization", "EDA", "CNN"],
+    category: "data science",
+    webapp: "https://github.com/therealmanraj/coswara",
   },
   {
     id: 3,
-    title:
-      "Building an automated model to predict and detect early onset osteoarthritis.",
-    date: "January 2023 - June 2023",
+    title: "Breaking Barriers: Predicting Student Success",
     description:
-      "This research targets the need to provide early detection of osteoarthritis to assist the ongoing global effort to make treatment of this disease viable and effective. With regards to the rapid degradation of the condition, it is critical to detect it early enough so that suppressive treatment can reduce symptoms and progression. Using an approach of automation via efficient data analysis, it is possible to detect arthritis quite early in a patient’s diagnostics. This paper aims to provide both a statistical and a more direct approach to the determination of the probability of osteoarthritis at early onset to improve the odds for a patient. The system will take primary variables from a patient's file and look for patterns matching cases in the dataset it was trained against. The dataset for the same has been taken from the NIH archive for academic purposes.",
-    image: arthResearchPaper,
-    tags: ["Python", "Machine Learning", "Pandas", "SciKit Learn"],
-    category: "research paper",
-    github: "https://github.com/therealmanraj/arthDetector",
-    paper: "https://ieeexplore.ieee.org/document/10262572",
+      "Inspired by students, I studied how factors like gender, ethnicity, and parental education affect exam scores. Built CI/CD ML pipeline to clean data, engineer features, and train models for predicting student scores. Deployed the model using Azure with an R² score of 0.8522, explaining 85.22% variance in predictions.",
+    image: breakingBarriers,
+    tags: ["Python", "Data Visualization", "ML Pipeline"],
+    category: "data science",
+    webapp:
+      "https://github.com/therealmanraj/students-Performance-ML-E2E-Project",
   },
   {
     id: 4,
+    title: "Medallion Architecture Azure Pipeline",
+    description:
+      "Developed a scalable ETL pipeline using Data Factory, Databricks, and Synapse with Medallion Architecture. Automated data ingestion and transformation, ensuring data readiness for creating dashboards in Power BI via Azure Synapse Analytics SQL connector.",
+    image: medallionArch,
+    tags: ["Python", "Azure Cloud"],
+    category: "data analysis",
+    webapp:
+      "https://github.com/therealmanraj/Adventure-Works-Data-Engineering-Project",
+  },
+  {
+    id: 5,
+    title: "Financial Credit Card Approval EDA and ML Pipeline",
+    description:
+      "Performed EDA on credit card transaction data, identifying fraudulent patterns and anomalies. Developed an ML pipeline for credit approval prediction, with feature selection and model training. Achieved 90% recall, identifying income and relationship status as primary approval decision factors.",
+    image: creditCard,
+    tags: ["Python", "Data Visualization", "EDA", "ML"],
+    category: "data science",
+    webapp: "https://github.com/therealmanraj/Credit-Card-Approval-Prediction",
+  },
+  {
+    id: 6,
+    title: "Competitive Intelligence",
+    description:
+      "A competitor analysis on Google Play apps to highlight rating drivers and strategic positioning. Found lightweight, paid apps achieve highest ratings; app size and pricing heavily influence success. Health & Fitness apps exceeding 85% positive reviews, while free apps face harsher scrutiny.",
+    image: competitveAnalysis,
+    tags: ["Python", "Data Visualization", "EDA"],
+    category: "data analysis",
+    webapp: "https://github.com/therealmanraj/Google-Play-Store-Apps-Analysis",
+  },
+  // {
+  //   id: 3,
+  //   title:
+  //     "Building an automated model to predict and detect early onset osteoarthritis.",
+  //   date: "January 2023 - June 2023",
+  //   description:
+  //     "This research targets the need to provide early detection of osteoarthritis to assist the ongoing global effort to make treatment of this disease viable and effective. With regards to the rapid degradation of the condition, it is critical to detect it early enough so that suppressive treatment can reduce symptoms and progression. Using an approach of automation via efficient data analysis, it is possible to detect arthritis quite early in a patient’s diagnostics. This paper aims to provide both a statistical and a more direct approach to the determination of the probability of osteoarthritis at early onset to improve the odds for a patient. The system will take primary variables from a patient's file and look for patterns matching cases in the dataset it was trained against. The dataset for the same has been taken from the NIH archive for academic purposes.",
+  //   image: arthResearchPaper,
+  //   tags: ["Python", "Machine Learning", "Pandas", "SciKit Learn"],
+  //   category: "research paper",
+  //   github: "https://github.com/therealmanraj/arthDetector",
+  //   paper: "https://ieeexplore.ieee.org/document/10262572",
+  // },
+  {
+    id: 7,
     title: "Finanseer",
-    date: "September 2023 - November 2023",
+    // date: "September 2023 - November 2023",
     description:
       "A cutting-edge MERN stack financial dashboard with machine learning predictions. Powered by Vite, Redux Toolkit, and Material UI for the frontend, and Node.js, Express.js, and MongoDB for the backend, Finanseer offers dynamic financial charts and real-time data updates. It currently uses dummy data to demonstrate its potential for handling real financial data. As both a software developer and data analyst, I'm excited to bridge the gap between these roles. Whether you're an experienced investor or new to finance, our user-friendly Material UI design ensures a seamless experience. ",
     image: finanseerMERN,
@@ -288,21 +331,21 @@ export const projects = [
     webapp: "https://neon-biscotti-086dd3.netlify.app/",
   },
   {
-    id: 5,
+    id: 8,
     title: "CryptoWhiz",
-    date: "September 2023 - October 2023",
+    // date: "September 2023 - October 2023",
     description:
       "Introducing CryptWhiz! I'm thrilled to share my React app, CryptWhiz. While it may not be flawless, it's a testament to my skills in data visualization, APIs, and web development. CryptWhiz empowers users to track and visualize real-time cryptocurrency data. With API integration and interactive charts, it offers a user-friendly experience. ",
     image: cryptoWhiz,
-    tags: ["React", "Machine Learning", "Rapid API"],
+    tags: ["React", "Rapid API"],
     category: "web app",
     github: "https://github.com/therealmanraj/cryptwhiz",
     webapp: "https://lucent-sorbet-9e60d1.netlify.app/",
   },
   {
-    id: 6,
+    id: 9,
     title: "COVID Application",
-    date: "August 2021 - September 2021",
+    // date: "August 2021 - September 2021",
     description:
       "The COVID-19 App, developed with Android Studio, is a versatile application that serves as a one-stop resource for COVID-19 information. It provides real-time data tracking, including cases and trends globally and locally. Users can access comprehensive vaccination information, including eligibility and appointment scheduling. The app offers essential COVID-19 guidelines and official resources for safety and testing. To facilitate navigation, it integrates Google Maps, helping users find testing centers and vaccination sites. With its user-friendly interface, the app ensures that users have quick and easy access to accurate and critical information, making it an invaluable tool in navigating the pandemic.",
     image: covidApp,
@@ -365,8 +408,7 @@ export const pictures = [
     id: 6,
     title: "Team SAA",
     type: "image",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4D2DAQE6h4LCo9tGoQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1689092630459?e=1743206400&v=beta&t=sEPwz7ZcMYgoClcHa2vWXUmC2ognPho692xmOUBYKFE",
+    image: teamSAA,
     description:
       "My incredible AMD Team SAA—the Indian team—where I worked as a Data Analyst Co-Op. I made lifelong friends here, and our camaraderie remains strong!",
   },
