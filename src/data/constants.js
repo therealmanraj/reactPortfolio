@@ -1,8 +1,12 @@
+import ARC_LOGO from "../images/ARC_LOGO.png";
+import AMD_LOGO from "../images/AMD_LOGO.webp";
+import PECS_LOGO from "../images/PECS_LOGO.webp";
+import INTERNSHALA_LOGO from "../images/INTERNSHALA_LOGO.webp";
 import coffeeSales from "../images/coffeeSales.png";
-// import arthResearchPaper from "../images/arthResearchPaper.png";
 import breakingBarriers from "../images/breakingBarriers.jpg";
 import covidApp from "../images/covidApp.jpeg";
 import coswara from "../images/coswara.jpg";
+import candianCO2 from "../images/candianCO2.jpg";
 import medallionArch from "../images/medallionArch.webp";
 import competitveAnalysis from "../images/competitveAnalysis.png";
 import creditCard from "../images/creditCard.jpeg";
@@ -137,7 +141,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3YEFx3Ec7AyA5xoNIkuG10gHN3WuGVokqZg&s",
+    img: ARC_LOGO,
     role: "Research Assistant",
     company: "Applied Research Centre",
     date: "September 2024 - Current",
@@ -154,7 +158,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: "https://play-lh.googleusercontent.com/S4SYraF727oJgsuEh8lEwV_RladmWJFML--52OQfjk71hV6S6n42tL-oXUXhlEJ3ng=s96-rw",
+    img: AMD_LOGO,
     role: "Data Analyst Co-Op",
     company: "AMD",
     date: "June 2022 - June 2023",
@@ -169,11 +173,9 @@ export const experiences = [
       "Flask",
     ],
   },
-
-  // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
   {
     id: 2,
-    img: "https://static.ambitionbox.com/assets/v2/images/rs:fit:200:200:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL3BsYW5ldC1lY29tLXNvbHV0aW9ucy5qcGc.webp",
+    img: PECS_LOGO,
     role: "AI Project Intern",
     company: "PECS",
     date: "May 2022 - July 2022",
@@ -182,7 +184,7 @@ export const experiences = [
   },
   {
     id: 3,
-    img: "https://play-lh.googleusercontent.com/8t6U6HGuMnP1DAJYpb4U_fEwVA7fgaOBJYRyfPHM5OLZllGj-8tsmJhu6Y4ikMrGpZg=w480-h960-rw",
+    img: INTERNSHALA_LOGO,
     role: "Internshala Student Partner 27",
     company: "Internshala",
     date: "Febuary 2022 - April 2022",
@@ -261,49 +263,59 @@ export const projects = [
     image: coswara,
     tags: ["Python", "Data Visualization", "EDA", "CNN"],
     category: "data science",
-    webapp: "https://github.com/therealmanraj/coswara",
+    github: "https://github.com/therealmanraj/coswara",
   },
   {
     id: 3,
+    title: "Canada Vehicle CO2 Emission EDA and Prediction Model",
+    description:
+      "Built a regression model to predict CO2 emissions from vehicles in Canada. Analysed key emission factors, identifying fuel type & transmission type as major contributors. Achieved an R-squared value of 0.9985 and an RMSE of 2.47, simplifying predictors and identifying key interactions that led to a more credible and effective model.",
+    image: candianCO2,
+    tags: ["Python", "Data Visualization", "EDA", "ML"],
+    category: "data science",
+    github: "https://github.com/therealmanraj/carbonEmissions",
+  },
+  {
+    id: 4,
     title: "Breaking Barriers: Predicting Student Success",
     description:
       "Inspired by students, I studied how factors like gender, ethnicity, and parental education affect exam scores. Built CI/CD ML pipeline to clean data, engineer features, and train models for predicting student scores. Deployed the model using Azure with an R² score of 0.8522, explaining 85.22% variance in predictions.",
     image: breakingBarriers,
     tags: ["Python", "Data Visualization", "ML Pipeline"],
     category: "data science",
-    webapp:
+    github:
       "https://github.com/therealmanraj/students-Performance-ML-E2E-Project",
   },
   {
-    id: 4,
+    id: 5,
     title: "Medallion Architecture Azure Pipeline",
     description:
       "Developed a scalable ETL pipeline using Data Factory, Databricks, and Synapse with Medallion Architecture. Automated data ingestion and transformation, ensuring data readiness for creating dashboards in Power BI via Azure Synapse Analytics SQL connector.",
     image: medallionArch,
     tags: ["Python", "Azure Cloud"],
     category: "data analysis",
-    webapp:
+    github:
       "https://github.com/therealmanraj/Adventure-Works-Data-Engineering-Project",
   },
   {
-    id: 5,
+    id: 6,
     title: "Financial Credit Card Approval EDA and ML Pipeline",
     description:
       "Performed EDA on credit card transaction data, identifying fraudulent patterns and anomalies. Developed an ML pipeline for credit approval prediction, with feature selection and model training. Achieved 90% recall, identifying income and relationship status as primary approval decision factors.",
     image: creditCard,
     tags: ["Python", "Data Visualization", "EDA", "ML"],
     category: "data science",
-    webapp: "https://github.com/therealmanraj/Credit-Card-Approval-Prediction",
+    github: "https://github.com/therealmanraj/Credit-Card-Approval-Prediction",
   },
   {
-    id: 6,
+    id: 7,
     title: "Competitive Intelligence",
     description:
       "A competitor analysis on Google Play apps to highlight rating drivers and strategic positioning. Found lightweight, paid apps achieve highest ratings; app size and pricing heavily influence success. Health & Fitness apps exceeding 85% positive reviews, while free apps face harsher scrutiny.",
     image: competitveAnalysis,
     tags: ["Python", "Data Visualization", "EDA"],
     category: "data analysis",
-    webapp: "https://github.com/therealmanraj/Google-Play-Store-Apps-Analysis",
+    github: "https://github.com/therealmanraj/Google-Play-Store-Apps-Analysis",
   },
   // {
   //   id: 3,
@@ -319,7 +331,7 @@ export const projects = [
   //   paper: "https://ieeexplore.ieee.org/document/10262572",
   // },
   {
-    id: 7,
+    id: 8,
     title: "Finanseer",
     // date: "September 2023 - November 2023",
     description:
@@ -331,7 +343,7 @@ export const projects = [
     webapp: "https://neon-biscotti-086dd3.netlify.app/",
   },
   {
-    id: 8,
+    id: 9,
     title: "CryptoWhiz",
     // date: "September 2023 - October 2023",
     description:
@@ -343,7 +355,7 @@ export const projects = [
     webapp: "https://lucent-sorbet-9e60d1.netlify.app/",
   },
   {
-    id: 9,
+    id: 10,
     title: "COVID Application",
     // date: "August 2021 - September 2021",
     description:
